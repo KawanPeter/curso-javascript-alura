@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<canvas width="800" height="800"></canvas>
+
+<script type="text/javascript">
+	
+	var tela = document.querySelector('canvas');
+	var pincel = tela.getContext('2d');
+
+	//fundo
+	pincel.fillStyle = 'green';
+	pincel.fillRect(70, 70, 460, 270);
+
+	// losango
+	pincel.fillStyle = 'yellow'
+	pincel.beginPath();
+	pincel.moveTo(140, 200);
+	pincel.lineTo(460, 200);
+	pincel.lineTo(300, 110);
+	pincel.fill();
+
+	pincel.beginPath();
+	pincel.moveTo(460, 200);
+	pincel.lineTo(140, 200);
+	pincel.lineTo(300, 290);
+	pincel.fill();
+	
+	//circulo
+	pincel.fillStyle = 'blue'
+	pincel.beginPath();
+	pincel.arc(300,200, 60, 0, 2 * 3.14);
+	pincel.fill();
+
+	//faixa
+	pincel.fillStyle = 'white';
+	pincel.fillRect(240, 198, 120, 10);
+
+</script>
